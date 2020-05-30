@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1589257532 source:/home/hazem/Desktop/ProjectVersionOperationnelle/Analyseur.cpp
+	"utils.h"
+
+1589262235 source:/home/hazem/Desktop/ProjectVersionOperationnelle/lecture.cpp
+	"utils.h"
+
+1589267502 /home/hazem/Desktop/ProjectVersionOperationnelle/utils.h
+	<vector>
+	<iostream>
+	<fstream>
+
+1589267986 source:/home/hazem/Desktop/ProjectVersionOperationnelle/main.cpp
+	<iostream>
+	"utils.h"
+
+1589261724 source:/home/hazem/Desktop/ProjectVersionOperationnelle/utils.cpp
+	"utils.h"
+
+1589079624 /home/hazem/Desktop/ProjectVersionOperationnelle/classes.h
+	<iostream>
+	<vector>
+	"utils.h"
+
+1589263142 source:/home/hazem/Desktop/ProjectVersionOperationnelle/index.cpp
+	"classes.h"
+	"utils.h"
+
+1589261913 source:/home/hazem/Desktop/ProjectVersionOperationnelle/ordonnaceur.cpp
+	"utils.h"
+
+1589262996 source:/home/hazem/Desktop/ProjectVersionOperationnelle/MoteurRecherche.cpp
+	"utils.h"
+
