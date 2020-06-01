@@ -1,4 +1,4 @@
-#include "utils.h"
+/*#include "utils.h"
 ordonnanseur::ordonnanseur(FILE*& f)
 {
 lecture lec ;
@@ -54,3 +54,4 @@ res.push_back(topScore->mot);
 }
 return res ;
 }
+*/

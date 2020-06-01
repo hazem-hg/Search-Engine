@@ -1,5 +1,5 @@
 //ce code source contients les défintions des méthodes de la classe lecture
-
+/*
 #include"utils.h"
 lecture::lecture()
 {
@@ -24,3 +24,4 @@ cout<<"fichier n'existe pas"<<endl;
 return(ProcessData(data));
 }
 
+*/

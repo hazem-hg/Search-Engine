@@ -1,7 +1,7 @@
 //ce header contient des types et des fonctions utiles et dont le projet dépend
-#ifndef UTILS_H_INCLUDED
-#define UTILS_H_INCLUDED
-#include<vector>
+//#ifndef UTILS_H_INCLUDED
+//#define UTILS_H_INCLUDED
+/*#include<vector>
 #include<iostream>
 #include<fstream>
 using namespace std ;
@@ -32,11 +32,10 @@ class Analyseur
 {
 public:
  Analyseur();
- vector<stat> analyser(vector<string>);
+ vector<stat> analyser(vector<string>&);
  void enregistrer(const char*);//enregistre les statistiques des mots d'un fichier dans un fichier sous le nom donné en argument et sou
- friend vector<string> ProcessData(vector<string>);//fonction amie se trouve dans utils.h qui permet d'éliminer la ponctuation et les symboles dans les mots pour étre prets a analyser
-friend ofstream& operator <<(ofstream&,Analyseur);
-protected:
+friend ostream& operator <<(ostream&,Analyseur&);
+//protected:
  vector<stat> st;//cet attribut est un vecteur de mots dont on élimine les mots et les symboles inutiles
 };
 
@@ -87,3 +86,4 @@ template<class T> void enregistrer(T,ofstream&);//enregistre les donnéées dans
 
 
 #endif // UTILS_H_INCLUDED
+*/

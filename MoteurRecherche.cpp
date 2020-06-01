@@ -1,4 +1,4 @@
-#include"utils.h"
+/*#include"utils.h"
 MoteurRecherche::MoteurRecherche(ifstream& f,FILE*& g)
 {
 *A=Analyseur();
@@ -6,3 +6,4 @@ MoteurRecherche::MoteurRecherche(ifstream& f,FILE*& g)
 *ord=ordonnanseur(g);
 
 }
+*/

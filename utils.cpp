@@ -1,4 +1,4 @@
-#include"utils.h"
+/*#include"utils.h"
 vector<string> ProcessData (vector<string> data)
 {
 
@@ -38,13 +38,15 @@ return flux ;
 
 };
 
-ofstream& operator <<(ofstream& flux,Analyseur A)//surcharge de l'operateur <<
+ostream& operator <<(ostream& flux,Analyseur &A)//surcharge de l'operateur <<
 {
 flux<<"mot"<<","<<"occurence"<<endl;
     for(vector<stat>::iterator i=A.st.begin();i!=A.st.end();i++)
     {
-        flux<<i->mot<<","<<i->occ<<endl; ;
+        flux<<i->mot<<","<<i->occ<<endl;
 
+    }
+    return flux ;
     }
 
 
@@ -70,3 +72,4 @@ f<<object;
 
 
 }
+*/

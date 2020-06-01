@@ -1,5 +1,5 @@
 //code source de la classe indexe
-#include"classes.h"
+/*#include"classes.h"
 #include"utils.h"
 indexe::indexe(ifstream& f)//le consructeur récupere les données dans index
 {
@@ -46,3 +46,4 @@ break;
 }
 return v ;
 };
+*/
