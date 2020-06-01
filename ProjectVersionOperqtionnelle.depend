@@ -32,9 +32,9 @@
 1589262996 source:/home/hazem/Desktop/ProjectVersionOperationnelle/MoteurRecherche.cpp
 	"utils.h"
 
-1590920819 source:/home/hazem/Documents/GitHub/Search-Engine/Analyseur.cpp
+1590973448 source:/home/hazem/Documents/GitHub/Search-Engine/Analyseur.cpp
 
-1590920833 /home/hazem/Documents/GitHub/Search-Engine/utils.h
+1590973444 /home/hazem/Documents/GitHub/Search-Engine/utils.h
 	<iostream>
 	<fstream>
 
@@ -53,9 +53,9 @@
 
 1590920904 source:/home/hazem/Documents/GitHub/Search-Engine/ordonnaceur.cpp
 
-1590920904 source:/home/hazem/Documents/GitHub/Search-Engine/utils.cpp
+1590973566 source:/home/hazem/Documents/GitHub/Search-Engine/utils.cpp
 
-1590972834 source:/home/hazem/Documents/GitHub/Search-Engine/main.cpp
+1591031414 source:/home/hazem/Documents/GitHub/Search-Engine/main.cpp
 	<iostream>
 	<vector>
 	<fstream>
