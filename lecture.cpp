@@ -7,19 +7,16 @@ lecture::lecture()
 };
 vector<string> lecture::lire(istream &f)
 {
-
+mots.clear();
 string x;
-if(f)
-{
 
-while((f>>x)&&(x!="finFile"))
+while((f>>x)&&(x!="endFlow"))
 {
 if(useData(x))
 mots.push_back(x);
 }
-}
-else
-cout<<"fichier n'existe pas"<<endl;
+
+
 return(mots);
 }
 

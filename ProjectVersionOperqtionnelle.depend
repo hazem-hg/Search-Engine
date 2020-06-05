@@ -32,13 +32,14 @@
 1589262996 source:/home/hazem/Desktop/ProjectVersionOperationnelle/MoteurRecherche.cpp
 	"utils.h"
 
-1591316664 source:/home/hazem/Documents/GitHub/Search-Engine/Analyseur.cpp
+1591383876 source:/home/hazem/Documents/GitHub/Search-Engine/Analyseur.cpp
 	"utils.h"
 
-1591318776 /home/hazem/Documents/GitHub/Search-Engine/utils.h
-	<vector>
+1591388685 /home/hazem/Documents/GitHub/Search-Engine/utils.h
 	<iostream>
+	<vector>
 	<fstream>
+	<string>
 
 1591315398 source:/home/hazem/Documents/GitHub/Search-Engine/index.cpp
 	"utils.h"
@@ -48,7 +49,7 @@
 	<vector>
 	"utils.h"
 
-1591305657 source:/home/hazem/Documents/GitHub/Search-Engine/lecture.cpp
+1591387102 source:/home/hazem/Documents/GitHub/Search-Engine/lecture.cpp
 	"utils.h"
 
 1591318790 source:/home/hazem/Documents/GitHub/Search-Engine/MoteurRecherche.cpp
@@ -57,13 +58,9 @@
 1591315454 source:/home/hazem/Documents/GitHub/Search-Engine/ordonnaceur.cpp
 	"utils.h"
 
-1591305554 source:/home/hazem/Documents/GitHub/Search-Engine/utils.cpp
+1591374154 source:/home/hazem/Documents/GitHub/Search-Engine/utils.cpp
 	"utils.h"
 
-1591318961 source:/home/hazem/Documents/GitHub/Search-Engine/main.cpp
-	<iostream>
-	<vector>
-	<fstream>
-	<string>
+1591384736 source:/home/hazem/Documents/GitHub/Search-Engine/main.cpp
 	"utils.h"
 
