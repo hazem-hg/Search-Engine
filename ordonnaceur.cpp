@@ -1,9 +1,8 @@
-/*#include "utils.h"
-ordonnanseur::ordonnanseur(FILE*& f)
+#include "utils.h"
+ordonnanseur::ordonnanseur(istream& flux)
 {
-lecture lec ;
-lec.lire(f);
-keywords=ProcessData(lec.mots);
+keywords=new lecture;
+keywords->lire(flux);
 }
 vector<stat> ordonnanseur::score(indexe indx)
 {
@@ -12,7 +11,7 @@ vector<stat> resulatScore;
 for(vector<triplet>::iterator i=indx.v.begin();i!=indx.v.end();i++)//1ere boucle pour parcourir l'index
 {
 bool e=false;//utilsé pour lavérification de l'existence du fichier dans le vecteur des fichier ayant déja un score
-for(vector<string>::iterator j=keywords.begin();j!=keywords.end();j++)//2eme boucle pour parcour les mots clés
+for(vector<string>::iterator j=keywords->mots.begin();j!=keywords->mots.end();j++)//2eme boucle pour parcour les mots clés
 {
 if(*j==i->mot)
 {
@@ -54,4 +53,11 @@ res.push_back(topScore->mot);
 }
 return res ;
 }
-*/
+ofstream& operator<<(ofstream& flux,ordonnanseur ord)
+{
+for(vector<string>::iterator i=ord.resultat.begin();i!=ord.resultat.end();i++)
+{
+flux<<*i<<endl;
+}
+return flux ;
+}

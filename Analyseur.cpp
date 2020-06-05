@@ -1,5 +1,5 @@
 //ce code source contients les défintions des méthodes de la classe Analyseur
-/*#include"utils.h"
+#include"utils.h"
 Analyseur::Analyseur()
 {
 
@@ -8,10 +8,10 @@ Analyseur::Analyseur()
 vector<stat> Analyseur::analyser(vector<string> &texte)
 {
 stat s;
-for(int i=0;i<texte.size();i++)
+for(unsigned int i=0;i<texte.size();i++)
 {
 bool exist=false;
-for(int j=0;j<st.size();j++)
+for(unsigned int j=0;j<st.size();j++)
 {
 if(texte.at(i)==st.at(j).mot)
 {
@@ -31,4 +31,4 @@ st.push_back(s);
 
 return(st);
 }
-*/
+

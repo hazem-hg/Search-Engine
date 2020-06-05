@@ -1,27 +1,28 @@
 //ce code source contients les défintions des méthodes de la classe lecture
-/*
+
 #include"utils.h"
 lecture::lecture()
 {
 
 };
-vector<string> lecture::lire(FILE*& f)
+vector<string> lecture::lire(istream &f)
 {
-vector<string> data ;
-string x;
 
+string x;
 if(f)
 {
 
-while(!feof(f))
+while((f>>x)&&(x!="finFile"))
 {
-data.push_back(x);
+if(useData(x))
+mots.push_back(x);
 }
 }
 else
 cout<<"fichier n'existe pas"<<endl;
-
-return(ProcessData(data));
+return(mots);
 }
 
-*/
+
+
+

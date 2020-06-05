@@ -1,29 +1,21 @@
-/*#include"utils.h"
-vector<string> ProcessData (vector<string> data)
+#include"utils.h"
+bool useData (string x)
 {
 
-vector<string> DataInutiles;
-ifstream useless;
-vector<string> UselessData;
-useless.open("DataInutiles.txt");
-string x;
-while(useless>>x)
-{
-UselessData.push_back(x);
-}
-for(vector<string>::iterator i=data.begin();i!=data.end();i++)
-{
-for(vector<string>::iterator j=UselessData.begin();i!=UselessData.end();j++)
+string UselessData[]={"a","an","was","were","so","and",",",";",".",":","/","!","?","%","*","+","=","#","(",")","-","_"};
 
+for(int i=0;i<22;i++)
 {
-if (*i==*j)
+
+if(UselessData[i]==x)
 {
-data.erase(i);
+return false;
 }
 }
+
+return true ;
 }
-return data ;
-}
+
 ofstream& operator <<(ofstream& flux,indexe ind)//surcharge de l'operateur <<
 {
 flux<<"fichier"<<","<<"mot"<<","<<"occurence"<<endl;
@@ -50,17 +42,11 @@ flux<<"mot"<<","<<"occurence"<<endl;
     }
 
 
-return flux ;
 
-};
-ofstream& operator<<(ofstream& flux,ordonnanseur ord)
-{
-for(vector<string>::iterator i=ord.resultat.begin();i!=ord.resultat.end();i++)
-{
-flux<<*i<<endl;
-}
-return flux ;
-}
+
+
+
+
 
 
 
@@ -72,4 +58,4 @@ f<<object;
 
 
 }
-*/
+

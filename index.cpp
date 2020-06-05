@@ -1,20 +1,18 @@
 //code source de la classe indexe
-/*#include"classes.h"
 #include"utils.h"
-indexe::indexe(ifstream& f)//le consructeur récupere les données dans index
+indexe::indexe(istream& f)//le consructeur récupere les données dans index
 {
 
   string fi,m;unsigned int i;triplet t;
 
-    if (f){
+
     f>>fi>>fi>>fi;//la premiere ligne contient les titres
-    while(!f.eof())
+    while(f>>fi>>m>>i)
     {
-        f>> fi >> m>>i ;
         t.fichier=fi;t.mot=m;t.occ=i;
         v.push_back(t);
 
-    }}
+    }
 
 
 };
@@ -46,4 +44,4 @@ break;
 }
 return v ;
 };
-*/
+

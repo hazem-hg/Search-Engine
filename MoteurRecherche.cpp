@@ -1,9 +1,10 @@
-/*#include"utils.h"
-MoteurRecherche::MoteurRecherche(ifstream& f,FILE*& g)
+#include"utils.h"
+MoteurRecherche::MoteurRecherche(istream& f,istream& g)
 {
-*A=Analyseur();
-*index=indexe(f);
-*ord=ordonnanseur(g);
+A=new Analyseur;
+index=new indexe(f);
+ord=new ordonnanseur(g);
+
 
 }
-*/
+
