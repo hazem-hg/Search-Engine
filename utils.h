@@ -43,7 +43,7 @@ friend ostream& operator <<(ostream&,Analyseur);
 class indexe
 {
 public :
-indexe(istream&);
+indexe();
 vector<triplet> indexer(vector<stat>,string) ;
 vector<triplet> reindexer(vector<stat>,string);
 friend ofstream& operator <<(ofstream&,indexe);
@@ -55,19 +55,21 @@ vector<triplet> v;
 class ordonnanseur
 {
 public:
-ordonnanseur(istream&);
+ordonnanseur();
+void lireRequete(istream&);
 vector<stat> score(indexe);//permet de donner un score à chaque fichier à partir des mots cclés
-vector<string> trier(vector<stat>);//permet de trier les fichiers à partir de leurs scores
+vector<string> trier();//permet de trier les fichiers à partir de leurs scores
 friend ostream& operator<<(ostream&,ordonnanseur);
  friend bool useData(string);
 
 lecture* keywords;
+vector<stat> tableScore;//score des fichiers
 vector<string> resultat;//vecteur des fichiers triées
 };
 class MoteurRecherche
 {
 public:
-MoteurRecherche(istream&,istream&);
+MoteurRecherche();
 
 Analyseur* A;
 indexe* index;
@@ -81,6 +83,7 @@ ordonnanseur* ord;
 bool useData (string);//fonction utile qui processe les donnéés et les prépare pour etre traitées
 ostream& operator <<(ostream&,Analyseur);//surcharge de l'operateur << pou la classe Analyseur
 ostream& operator <<(ostream&,indexe ind);//surcharge de l'operateur << pou la classe index
+ostream& operator<<(ostream&,ordonnanseur);
 template<class T> void enregistrer(T,ofstream&);//enregistre les donnéées dans un fichier mais il fait la surcharge de l'opérateur <<
 
 

@@ -1,9 +1,9 @@
 #include"utils.h"
-MoteurRecherche::MoteurRecherche(istream& f,istream& g)
+MoteurRecherche::MoteurRecherche()
 {
 A=new Analyseur;
-index=new indexe(f);
-ord=new ordonnanseur(g);
+index=new indexe();
+ord=new ordonnanseur;
 
 
 }

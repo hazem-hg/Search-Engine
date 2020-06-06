@@ -7,32 +7,37 @@ using namespace std;
 
 int main()
 {
-MoteurRecherche* m;
-m=new MoteurRecherche(cin,cin);
+MoteurRecherche m;
 lecture l;
 l.lire(cin);
-for(unsigned int i=0;i<l.mots.size();i++)
-cout<<l.mots.at(i);
-string a="F1";
-string b="F1";
-m->A->analyser(l.mots);
-Analyseur j=*(m->A);
-cout<<j;
-//for(unsigned int i=0;i<j.st.size();i++)
-//cout<<j.st.at(i).mot<<j.st.at(i).occ;
-m->index->indexer(m->A->st,"F1");
+m.A->analyser(l.mots);
+cout<<*m.A;
+m.index->indexer(m.A->st,"F1");
+cout<<*m.index;
 l.lire(cin);
-m->A->analyser(l.mots);
-m->index->indexer(m->A->st,"F2");
-indexe in=*(m->index);
-cout<<in;
+m.A->analyser(l.mots);
+cout<<*m.A;
+m.index->indexer(m.A->st,"F2");
+cout<<*m.index;
+l.lire(cin);
+m.A->analyser(l.mots);
+cout<<*m.A;
+m.index->indexer(m.A->st,"F3");
+cout<<*m.index;
+l.lire(cin);
+m.A->analyser(l.mots);
+cout<<*m.A;
+m.index->indexer(m.A->st,"F4");
+cout<<*m.index;
+m.ord->lireRequete(cin);
+m.ord->score(*m.index);
+/*for(int i=0;i<o.tableScore.size();i++)
+cout<<o.tableScore.at(i).mot<<" "<<o.tableScore.at(i).occ<<endl;*/
+m.ord->trier();
+//for(int i=0;i<o.resultat.size();i++)
+//cout<<o.resultat.at(i)<<endl;
+cout<<*m.ord;
 
-/*lecture *l;
-l=new lecture;
-l->lire(cin);
-for(unsigned int i=0;i<l->mots.size();i++)
-cout<<l->mots.at(i);
-*/
-return 0 ;
+return 0;
 
 }

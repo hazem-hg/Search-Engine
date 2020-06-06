@@ -1,7 +1,11 @@
 #include "utils.h"
-ordonnanseur::ordonnanseur(istream& flux)
+ordonnanseur::ordonnanseur()
 {
 keywords=new lecture;
+
+}
+void ordonnanseur::lireRequete(istream& flux)
+{
 keywords->lire(flux);
 }
 vector<stat> ordonnanseur::score(indexe indx)
@@ -34,30 +38,30 @@ resulatScore.push_back(Fsc);
 }
 }
 }
+tableScore=resulatScore;
 return resulatScore;
 }
-vector<string>ordonnanseur::trier(vector<stat> st)
+vector<string>ordonnanseur::trier()
 {
-vector<string> res;
-vector<stat>::iterator topScore=st.begin();
-while(st.empty())
+vector<stat> sc=tableScore;
+unsigned int n=sc.size();
+while(sc.size()>n/2)
 {
-for(vector<stat>::iterator i=st.begin();i!=st.end();i++)
+vector<stat>::iterator topScore=sc.begin();
+for(vector<stat>::iterator i=sc.begin();i!=sc.end();i++)
 {
 if(i->occ>topScore->occ)
-{topScore=i;
-st.erase(i);
-}
-}
-res.push_back(topScore->mot);
-}
-return res ;
-}
-ofstream& operator<<(ofstream& flux,ordonnanseur ord)
 {
-for(vector<string>::iterator i=ord.resultat.begin();i!=ord.resultat.end();i++)
-{
-flux<<*i<<endl;
+
+topScore=i;
+
 }
-return flux ;
+
+}
+resultat.push_back(topScore->mot);
+sc.erase(topScore);
+}
+
+
+return resultat ;
 }

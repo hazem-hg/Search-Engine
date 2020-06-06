@@ -42,6 +42,14 @@ flux<<"mot"<<","<<"occurence"<<endl;
     }
 
 
+ostream& operator<<(ostream& flux,ordonnanseur ord)
+{
+for(vector<string>::iterator i=ord.resultat.begin();i!=ord.resultat.end();i++)
+{
+flux<<*i<<endl;
+}
+return flux ;
+}
 
 
 
