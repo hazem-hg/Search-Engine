@@ -4,6 +4,7 @@
 #include <iostream>
 #include<vector>
 #include<map>
+
 #include<fstream>
 #include<string>
 using namespace std ;
@@ -39,6 +40,15 @@ friend ostream& operator <<(ostream&,Analyseur);
 //protected:
  vector<stat> st;//cet attribut est un vecteur de mots dont on élimine les mots et les symboles inutiles
 };
+class AnalyseurMap
+{
+public:
+ AnalyseurMap();
+ map<string,int> analyser(vector<string>);
+friend ostream& operator <<(ostream&,Analyseur);
+//protected:
+ map<string,int> st;
+};
 
 
 class indexe
@@ -51,7 +61,18 @@ friend ofstream& operator <<(ofstream&,indexe);
 
 
 vector<triplet> v;
-;
+
+};
+class indexeMMap
+{
+public :
+indexeMMap();
+multimap<string,stat> indexer(map<string,int>,string) ;
+multimap<string,stat> reindexer(map<string,int>,string);
+
+
+multimap<string,stat> v;
+
 };
 class ordonnanseur
 {

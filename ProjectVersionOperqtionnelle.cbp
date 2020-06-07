@@ -33,7 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Analyseur.cpp" />
-		<Unit filename="AnalyseurMap.cpp" />
+		<Unit filename="AnalyseurMMap.cpp" />
 		<Unit filename="MoteurRecherche.cpp" />
 		<Unit filename="index.cpp" />
 		<Unit filename="lecture.cpp" />

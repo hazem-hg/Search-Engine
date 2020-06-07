@@ -1,14 +1,6 @@
 #include"utils.h"
 #include<map>
-class AnalyseurMap
-{
-public:
- AnalyseurMap();
- map<string,int> analyser(vector<string>);
-friend ostream& operator <<(ostream&,Analyseur);
-//protected:
- map<string,int> st;
-};
+
 AnalyseurMap::AnalyseurMap()
 {
 

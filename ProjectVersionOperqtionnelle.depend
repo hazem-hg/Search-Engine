@@ -67,7 +67,7 @@
 1591469769 source:/home/toto/Documents/GitHub/Search-Engine/Analyseur.cpp
 	"utils.h"
 
-1591483258 /home/toto/Documents/GitHub/Search-Engine/utils.h
+1591500727 /home/toto/Documents/GitHub/Search-Engine/utils.h
 	<iostream>
 	<vector>
 	<map>
@@ -80,7 +80,7 @@
 1591469802 source:/home/toto/Documents/GitHub/Search-Engine/lecture.cpp
 	"utils.h"
 
-1591469756 source:/home/toto/Documents/GitHub/Search-Engine/main.cpp
+1591500825 source:/home/toto/Documents/GitHub/Search-Engine/main.cpp
 	"utils.h"
 
 1591469764 source:/home/toto/Documents/GitHub/Search-Engine/MoteurRecherche.cpp
@@ -90,5 +90,12 @@
 	"utils.h"
 
 1591469794 source:/home/toto/Documents/GitHub/Search-Engine/utils.cpp
+	"utils.h"
+
+1591497750 source:/home/toto/Documents/GitHub/Search-Engine/AnalyseurMMap.cpp
+	"utils.h"
+	<map>
+
+1591500727 source:/home/toto/Documents/GitHub/Search-Engine/indexeMap.cpp
 	"utils.h"
 
