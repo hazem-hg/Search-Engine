@@ -64,3 +64,31 @@
 1591384736 source:/home/hazem/Documents/GitHub/Search-Engine/main.cpp
 	"utils.h"
 
+1591469769 source:/home/toto/Documents/GitHub/Search-Engine/Analyseur.cpp
+	"utils.h"
+
+1591483258 /home/toto/Documents/GitHub/Search-Engine/utils.h
+	<iostream>
+	<vector>
+	<map>
+	<fstream>
+	<string>
+
+1591469782 source:/home/toto/Documents/GitHub/Search-Engine/index.cpp
+	"utils.h"
+
+1591469802 source:/home/toto/Documents/GitHub/Search-Engine/lecture.cpp
+	"utils.h"
+
+1591469756 source:/home/toto/Documents/GitHub/Search-Engine/main.cpp
+	"utils.h"
+
+1591469764 source:/home/toto/Documents/GitHub/Search-Engine/MoteurRecherche.cpp
+	"utils.h"
+
+1591469748 source:/home/toto/Documents/GitHub/Search-Engine/ordonnaceur.cpp
+	"utils.h"
+
+1591469794 source:/home/toto/Documents/GitHub/Search-Engine/utils.cpp
+	"utils.h"
+

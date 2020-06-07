@@ -3,6 +3,7 @@
 #define UTILS_H_INCLUDED
 #include <iostream>
 #include<vector>
+#include<map>
 #include<fstream>
 #include<string>
 using namespace std ;
