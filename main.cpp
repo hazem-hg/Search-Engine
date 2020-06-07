@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-/*MoteurRecherche m;
+MoteurRecherche m;
 lecture l;
 l.lire(cin);
 m.A->analyser(l.mots);
@@ -37,8 +37,8 @@ m.ord->trier();
 //for(int i=0;i<o.resultat.size();i++)
 //cout<<o.resultat.at(i)<<endl;
 cout<<*m.ord;
-*/
-lecture l;
+
+/*lecture l;
 l.lire(cin);
 AnalyseurMap A;
 A.analyser(l.mots);
@@ -51,7 +51,7 @@ A.analyser(l.mots);
 in.indexer(A.st,"F2");
 for(multimap<string,stat>::iterator i=in.v.begin();i!=in.v.end();i++)
 cout<<i->first<<" "<<i->second.mot<<" "<<i->second.occ<<endl;
-
+*/
 
 return 0;
 
