@@ -1,7 +1,15 @@
 #ifndef DERIVEDCLASS_H_INCLUDED
 #define DERIVEDCLASS_H_INCLUDED
 #include"abstractClass.h"
-
+class AnalyseurMap
+{
+public:
+ AnalyseurMap();
+ map<string,int> analyser(vector<string>);
+friend ostream& operator <<(ostream&,Analyseur);
+//protected:
+ map<string,int> st;
+};
 class AnalyseurMap
 {
 public:
