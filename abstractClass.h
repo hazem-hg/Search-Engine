@@ -8,10 +8,11 @@ class lecture
 //cette classe permet d'instancer un objet afin de lire un fichier et obtenir les mots qui contient
 public:
 lecture();//constructeur permettant d'initialiser le nom du fichier
+ virtual bool useData(string)=0;//fonction amie se trouve dans utils.h qui permet d'éliminer la ponctuation et les symboles
  virtual vector<string> lire(istream&)=0;//retourner les mots non traités contenues dans le fichier p
-virtual bool useData(string)=0;//fonction amie se trouve dans utils.h qui permet d'éliminer la ponctuation et les symboles
 vector<string>getWords();
 friend ostream& operator<<(ostream&,lecture*);
+virtual ~lecture();
 protected:
 vector<string> mots;//les mots extraites du fichier
 };
@@ -19,10 +20,13 @@ class Analyseur
 {
 public:
  Analyseur(string);
- virtual void analyser(vector<string>)=0;
- string getFile();
-protected:
+ virtual void analyser()=0;
+ string getFileName();
+ vector<string> getWords();
+ void  setFile(string,vector<string>);
+private:
     string fichierCourant ;
+    vector<string> words;
 };
 class indexe
 {
@@ -53,7 +57,7 @@ public:
 MoteurRecherche();
 virtual vector<string> rechercher()=0;
 virtual ~MoteurRecherche();
-private:
+protected:
 Analyseur* A;
 indexe* index;
 ordonnanceur* ord;

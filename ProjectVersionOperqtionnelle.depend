@@ -32,36 +32,35 @@
 1589262996 source:/home/hazem/Desktop/ProjectVersionOperationnelle/MoteurRecherche.cpp
 	"utils.h"
 
-1591383876 source:/home/hazem/Documents/GitHub/Search-Engine/Analyseur.cpp
-	"utils.h"
+1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/Analyseur.cpp
 
-1591388685 /home/hazem/Documents/GitHub/Search-Engine/utils.h
+1591645920 /home/hazem/Documents/GitHub/Search-Engine/utils.h
 	<iostream>
-	<vector>
 	<fstream>
 	<string>
+	<iostream>
+	<vector>
+	<map>
 
-1591315398 source:/home/hazem/Documents/GitHub/Search-Engine/index.cpp
-	"utils.h"
+1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/index.cpp
 
 1590872680 /home/hazem/Documents/GitHub/Search-Engine/classes.h
 	<iostream>
 	<vector>
 	"utils.h"
 
-1591387102 source:/home/hazem/Documents/GitHub/Search-Engine/lecture.cpp
+1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/lecture.cpp
 	"utils.h"
 
-1591318790 source:/home/hazem/Documents/GitHub/Search-Engine/MoteurRecherche.cpp
+1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/MoteurRecherche.cpp
 	"utils.h"
 
-1591315454 source:/home/hazem/Documents/GitHub/Search-Engine/ordonnaceur.cpp
+1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/ordonnaceur.cpp
+
+1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/utils.cpp
 	"utils.h"
 
-1591374154 source:/home/hazem/Documents/GitHub/Search-Engine/utils.cpp
-	"utils.h"
-
-1591384736 source:/home/hazem/Documents/GitHub/Search-Engine/main.cpp
+1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/main.cpp
 	"utils.h"
 
 1591540213 source:/home/toto/Documents/GitHub/Search-Engine/Analyseur.cpp
@@ -104,4 +103,16 @@
 
 1591533658 source:/home/toto/Documents/GitHub/Search-Engine/abstractClass.cpp
 	"abstractClass.h"
+
+1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/abstractClass.cpp
+	"abstractClass.h"
+
+1591659481 /home/hazem/Documents/GitHub/Search-Engine/abstractClass.h
+	"utils.h"
+
+1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/AnalyseurMMap.cpp
+	"utils.h"
+	<map>
+
+1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/ordonnanceurBinaire.cpp
 

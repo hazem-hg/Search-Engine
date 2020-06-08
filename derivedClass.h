@@ -1,33 +1,47 @@
 #ifndef DERIVEDCLASS_H_INCLUDED
 #define DERIVEDCLASS_H_INCLUDED
 #include"abstractClass.h"
-class AnalyseurMap
+class lectureStandard:public lecture
+{
+//cette classe permet d'instancer un objet afin de lire un fichier et obtenir les mots qui contient
+public:
+lecture();//constructeur permettant d'initialiser le nom du fichier
+ vector<string> lire(istream&);//retourner les mots non traités contenues dans le fichier p
+ bool useData(string)=0;//fonction amie se trouve dans utils.h qui permet d'éliminer la ponctuation et les symboles
+ vector<string> lire(istream&);//retourner les mots non traités contenues dans le fichier p
+~lectureStandard()
+};
+class AnalyseurVect
 {
 public:
- AnalyseurMap();
- map<string,int> analyser(vector<string>);
-friend ostream& operator <<(ostream&,Analyseur);
-//protected:
- map<string,int> st;
+ AnalyseurVect(string,vector<string>);
+void analyser(vector<string>);
+vector<stat> getAnalyse();
+friend ostream& operator <<(ostream&,AnalyseurVect);
+private:
+ vector<stat> st;
 };
 class AnalyseurMap
 {
 public:
- AnalyseurMap();
- map<string,int> analyser(vector<string>);
-friend ostream& operator <<(ostream&,Analyseur);
-//protected:
+ AnalyseurMap(string);
+ void analyser(vector<string>);
+ map<string,int> getAnalyse();
+friend ostream& operator <<(ostream&,AnalyseurMap);
+private:
  map<string,int> st;
 };
 class indexeVect:indexe
 {
 public :
-indexe();
-vector<triplet> indexer(vector<stat>,string) ;
-vector<triplet> reindexer(vector<stat>,string);
-friend ofstream& operator <<(ofstream&,indexe);
-
-
+indexeVect();
+void indexer(AnalyseurVect*) ;
+void reindexer(AnalyseurVect*);
+vector<triplet> getIndex();
+friend ostream& operator <<(ostream&,indexeVect);
+friend ostream& operator>>(ostream&,indexeVect)
+~indexeVect();
+private:
 vector<triplet> v;
 };
 
@@ -37,10 +51,12 @@ class indexeMMap
 {
 public :
 indexeMMap();
-multimap<string,stat> indexer(map<string,int>,string) ;
-multimap<string,stat> reindexer(map<string,int>,string);
-
-
+multimap<string,stat> indexer(AnalyseurMap*) ;
+multimap<string,stat> reindexer(AnalyseurMap*);
+multimap<string,stat>getIndexe();
+friend ostream& operator <<(ostream&,indexeMMap);
+friend ostream& operator>>(ostream&,indexeMMap)
+private:
 multimap<string,stat> v;
 
 };
@@ -48,7 +64,7 @@ class ordonnanceurOcc:public ordonnanceur
 {
 public:
     ordonnanseurOcc();
-    void score(indexe);//permet de donner un score à chaque fichier à partir des mots cclés
+    void score(indexe*);//permet de donner un score à chaque fichier à partir des mots cclés
     void trier();//permet de trier les fichiers à partir de leurs scores
     vector<stat> getScore();//retourne les scores des fichiers
     ~ordonnanceurOcc();
@@ -56,15 +72,31 @@ private:
 vector<stat> tableScore;//score des fichiers
 
 };
-class MoteurRecherche
+class ordonnanceurBinaire:public ordonnanceur
 {
 public:
-MoteurRecherche();
+    ordonnanseurBinaire();
+    void score(indexe*);//permet de donner un score à chaque fichier à partir des mots cclés
+    void trier();//permet de trier les fichiers à partir de leurs scores
+    vector<stat> getExist();//retourne les scores des fichiers
+    ~ordonnanceurBinaire();
+private:
+vector<stat> tableBinaire;//score des fichiers
 
-Analyseur* A;
-indexe* index;
-ordonnanseur* ord;
+class MoteurRechercheVOne:public MoteurRecherche
+{
+public:
+MoteurRechercheVOne();
+vector<string> rechercher();
+~MoteurRechercheVone();
 
 };
+class MoteurRechercheVTwo:public MoteurRecherche
+{
+public:
+MoteurRechercheVTwo();
+vector<string> rechercher();
+~MoteurRechercheVTwo();
 
+};
 #endif // DERIVEDCLASS_H_INCLUDED

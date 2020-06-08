@@ -1,4 +1,31 @@
 #include"abstractClass.h"
+//les méthode et les fonctions amies lièes à la
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*ostream& operator <<(ostream& flux,indexeVcet* ind)//surcharge de l'operateur <<
 {
 flux<<"fichier"<<","<<"mot"<<","<<"occurence"<<endl;
