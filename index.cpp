@@ -1,20 +1,8 @@
 //code source de la classe indexe
-#include"utils.h"
+/*#include"utils.h"
 indexe::indexe()//le consructeur récupere les données dans index
 {
-/*
-  string fi,m;unsigned int i;triplet t;
 
-
-    f>>fi>>fi>>fi;//la premiere ligne contient les titres
-    while((f>>fi>>m>>i)&&(f!="endFlow"))
-    {
-        t.fichier=fi;t.mot=m;t.occ=i;
-        v.push_back(t);
-
-    }
-
-*/
 };
 vector<triplet> indexe::indexer(vector<stat> s,string nomf)//permet de indexer un nouveau fichier
 {
@@ -43,5 +31,5 @@ break;
 }
 }
 return v ;
-};
+};*/
 

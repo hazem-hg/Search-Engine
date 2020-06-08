@@ -1,4 +1,16 @@
 /*#include "utils.h"
+class ordonnanceurBinaire
+{
+public:
+ordonnanceurBinaireeur();
+void score(indexe);//permet de donner un score à chaque fichier à partir des mots cclés
+void trier();//permet de trier les fichiers à partir de leurs scores
+
+
+lecture* keywords;
+vector<stat> tableScore;//score des fichiers
+vector<string> resultat;//vecteur des fichiers triées
+};
 ordonnanseur::ordonnanseur()
 {
 keywords=new lecture;

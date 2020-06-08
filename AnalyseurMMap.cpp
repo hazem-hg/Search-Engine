@@ -1,6 +1,6 @@
 #include"utils.h"
 #include<map>
-
+/*
 AnalyseurMap::AnalyseurMap()
 {
 
@@ -32,4 +32,4 @@ st.insert(map<string,int>::value_type(*i,1));
 
 return(st);
 }
-
+*/

@@ -1,5 +1,5 @@
 //ce code source contients les défintions des méthodes de la classe Analyseur
-#include"utils.h"
+/*#include"utils.h"
 Analyseur::Analyseur()
 {
 
@@ -33,3 +33,4 @@ st.push_back(s);
 return(st);
 }
 
+*/

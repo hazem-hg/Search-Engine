@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-MoteurRecherche m;
+/*MoteurRecherche m;
 lecture l;
 l.lire(cin);
 m.A->analyser(l.mots);

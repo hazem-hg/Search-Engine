@@ -1,10 +1,10 @@
 #include"utils.h"
-MoteurRecherche::MoteurRecherche()
+/*MoteurRecherche::MoteurRecherche()
 {
 A=new Analyseur;
 index=new indexe();
 ord=new ordonnanseur;
 
 
-}
+}*/
 

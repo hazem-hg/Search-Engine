@@ -64,38 +64,44 @@
 1591384736 source:/home/hazem/Documents/GitHub/Search-Engine/main.cpp
 	"utils.h"
 
-1591469769 source:/home/toto/Documents/GitHub/Search-Engine/Analyseur.cpp
-	"utils.h"
+1591540213 source:/home/toto/Documents/GitHub/Search-Engine/Analyseur.cpp
 
-1591500727 /home/toto/Documents/GitHub/Search-Engine/utils.h
+1591539643 /home/toto/Documents/GitHub/Search-Engine/utils.h
+	<iostream>
+	<fstream>
+	<string>
 	<iostream>
 	<vector>
 	<map>
-	<fstream>
-	<string>
 
-1591469782 source:/home/toto/Documents/GitHub/Search-Engine/index.cpp
+1591540320 source:/home/toto/Documents/GitHub/Search-Engine/index.cpp
+
+1591540320 source:/home/toto/Documents/GitHub/Search-Engine/lecture.cpp
 	"utils.h"
 
-1591469802 source:/home/toto/Documents/GitHub/Search-Engine/lecture.cpp
+1591533659 source:/home/toto/Documents/GitHub/Search-Engine/main.cpp
 	"utils.h"
 
-1591523983 source:/home/toto/Documents/GitHub/Search-Engine/main.cpp
+1591540320 source:/home/toto/Documents/GitHub/Search-Engine/MoteurRecherche.cpp
 	"utils.h"
 
-1591469764 source:/home/toto/Documents/GitHub/Search-Engine/MoteurRecherche.cpp
+1591533659 source:/home/toto/Documents/GitHub/Search-Engine/ordonnaceur.cpp
+
+1591540960 source:/home/toto/Documents/GitHub/Search-Engine/utils.cpp
 	"utils.h"
 
-1591469748 source:/home/toto/Documents/GitHub/Search-Engine/ordonnaceur.cpp
-	"utils.h"
-
-1591469794 source:/home/toto/Documents/GitHub/Search-Engine/utils.cpp
-	"utils.h"
-
-1591497750 source:/home/toto/Documents/GitHub/Search-Engine/AnalyseurMMap.cpp
+1591540320 source:/home/toto/Documents/GitHub/Search-Engine/AnalyseurMMap.cpp
 	"utils.h"
 	<map>
 
 1591500727 source:/home/toto/Documents/GitHub/Search-Engine/indexeMap.cpp
 	"utils.h"
+
+1591539816 /home/toto/Documents/GitHub/Search-Engine/abstractClass.h
+	"utils.h"
+
+1591530220 source:/home/toto/Documents/GitHub/Search-Engine/ordonnanceurBinaire.cpp
+
+1591533658 source:/home/toto/Documents/GitHub/Search-Engine/abstractClass.cpp
+	"abstractClass.h"
 

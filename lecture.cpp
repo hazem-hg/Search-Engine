@@ -1,7 +1,7 @@
 //ce code source contients les défintions des méthodes de la classe lecture
 
 #include"utils.h"
-lecture::lecture()
+/*lecture::lecture()
 {
 
 };
@@ -19,7 +19,7 @@ mots.push_back(x);
 
 return(mots);
 }
-
+*/
 
 
 
