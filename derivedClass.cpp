@@ -218,6 +218,10 @@ break;
 }
 
 }
+multimap<string,stat>indexeMMap::getIndex()const
+{
+return v;
+}
 indexeMMap::~indexeMMap()
 {}
 ostream& operator <<(ostream& flux,indexeMMap* ind)//surcharge de l'operateur <<
@@ -233,3 +237,148 @@ flux<<"fichier"<<","<<"mot"<<","<<"occurence"<<endl;
 return flux ;
 
 };
+        //class ordonnanceurOcc
+ordonnanceurOccV::ordonnanceurOccV()
+{
+keywords=new lectureStandard;
+}
+void ordonnanceurOccV::score(indexeVect* indx)
+{
+tableScore.clear();
+stat Fsc;//aissi attribut mot du stat réprésente le nom du fichier et occ réprésente le score
+vector<stat> resulatScore;
+for(vector<triplet>::iterator i=indx->getIndex().begin();i!=indx->getIndex().end();i++)//1ere boucle pour parcourir l'index
+{
+bool e=false;//utilsé pour lavérification de l'existence du fichier dans le vecteur des fichier ayant déja un score
+for(vector<string>::iterator j=keywords->getWords().begin();j!=keywords->getWords().end();j++)//2eme boucle pour parcour les mots clés
+{
+if(*j==i->mot)
+{
+for(vector<stat>::iterator k=resulatScore.begin();k!=resulatScore.end();k++)//3eme boucle pour parcourir le cecteur des fichiers ayants un score
+{
+ e=i->fichier==k->mot;
+if(e)
+{
+k->occ=(k->occ)*(1+i->occ);
+break;
+}
+}
+if(!e)
+{
+Fsc.mot=i->fichier;
+Fsc.occ=1+i->occ;
+resulatScore.push_back(Fsc);
+}
+
+}
+}
+}
+tableScore=resulatScore;
+
+}
+void ordonnanceurOccV::trier()
+{
+vector<stat> sc=tableScore;
+unsigned int n=sc.size();
+while(sc.size()>n/2)
+{
+vector<stat>::iterator topScore=sc.begin();
+for(vector<stat>::iterator i=sc.begin();i!=sc.end();i++)
+{
+if(i->occ>topScore->occ)
+{
+
+topScore=i;
+
+}
+
+}
+result.push_back(topScore->mot);
+sc.erase(topScore);
+}
+
+
+}
+vector<stat>ordonnanceurOccV::getScore()const
+{
+return tableScore;
+}
+ordonnanceurOccV::~ordonnanceurOccV()
+{}
+
+        //class ordonnanceurOccM
+ ordonnanceurOccM::ordonnanceurOccM()
+{
+keywords=new lectureStandard;
+}
+void ordonnanceurOccM::score(indexeMMap* indx)
+{
+tableScore.clear();
+stat Fsc;//aissi attribut mot du stat réprésente le nom du fichier et occ réprésente le score
+
+for(multimap<string,stat>::iterator i=indx->getIndex().begin();i!=indx->getIndex().end();i++)//1ere boucle pour parcourir l'index
+{
+bool e=false;//utilsé pour lavérification de l'existence du fichier dans le vecteur des fichier ayant déja un score
+for(vector<string>::iterator j=keywords->getWords().begin();j!=keywords->getWords().end();j++)//2eme boucle pour parcour les mots clés
+{
+if(*j==i->second.mot)
+{
+for(map<string,int>::iterator k=tableScore.begin();k!=tableScore.end();k++)//3eme boucle pour parcourir le cecteur des fichiers ayants un score
+{
+ e=i->second.mot==k->first;
+if(e)
+{
+k->second=(k->second)*(1+i->second.occ);
+break;
+}
+}
+if(!e)
+{
+Fsc.occ=1+i->second.occ;
+tableScore[i->first]=1+i->second.occ;
+}
+
+}
+}
+}
+
+
+}
+void ordonnanceurOccM::trier()
+{
+map<string,int> sc=tableScore;
+unsigned int n=sc.size();
+while(sc.size()>n/2)
+{
+map<string,int>::iterator topScore=sc.begin();
+for(map<string,int>::iterator i=sc.begin();i!=sc.end();i++)
+{
+if(i->second>topScore->second)
+{
+
+topScore=i;
+
+}
+
+}
+result.push_back(topScore->first);
+sc.erase(topScore);
+}
+
+
+}
+map<string,int>ordonnanceurOccM::getScore()const
+{
+return tableScore;
+
+}
+ordonnanceurOccM::~ordonnanceurOccM()
+{}
+                //class MoteurVPne
+
+
+
+
+
+
+

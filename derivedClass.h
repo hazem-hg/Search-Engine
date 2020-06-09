@@ -54,7 +54,7 @@ public :
 indexeMMap();
 void indexer(AnalyseurMap*) ;
 void reindexer(AnalyseurMap*);
-multimap<string,stat>getIndexe();
+multimap<string,stat>getIndex()const;
 friend ostream& operator <<(ostream&,indexeMMap*);
 friend istream& operator>>(istream&,indexeMMap*);
 ~indexeMMap();
@@ -62,29 +62,42 @@ private:
 multimap<string,stat> v;
 
 };
-class ordonnanceurOcc:public ordonnanceur
+class ordonnanceurOccV:public ordonnanceur
 {
 public:
-    ordonnanceurOcc();
-    void score(indexe*);//permet de donner un score à chaque fichier à partir des mots cclés
+    ordonnanceurOccV();
+    void score(indexeVect*);//permet de donner un score à chaque fichier à partir des mots cclés
     void trier();//permet de trier les fichiers à partir de leurs scores
-    vector<stat> getScore();//retourne les scores des fichiers
-    ~ordonnanceurOcc();
+    vector<stat> getScore()const;//retourne les scores des fichiers
+    ~ordonnanceurOccV();
 private:
 vector<stat> tableScore;//score des fichiers
 
 };
-class ordonnanceurBinaire:public ordonnanceur
+class ordonnanceurOccM:public ordonnanceur
+{
+public:
+    ordonnanceurOccM();
+    void score(indexeMMap*);//permet de donner un score à chaque fichier à partir des mots cclés
+    void trier();//permet de trier les fichiers à partir de leurs scores
+    map<string,int> getScore()const;//retourne les scores des fichiers
+    ~ordonnanceurOccM();
+private:
+map<string,int> tableScore;//score des fichiers
+
+};
+/*class ordonnanceurBinaire:public ordonnanceur
 {
 public:
     ordonnanceurBinaire();
-    void score(indexe*);//permet de donner un score à chaque fichier à partir des mots cclés
+    void score(indexeMMap*);//permet de donner un score à chaque fichier à partir des mots cclés
     void trier();//permet de trier les fichiers à partir de leurs scores
-    vector<stat> getExist();//retourne les scores des fichiers
+    map<string,int> getExist();
     ~ordonnanceurBinaire();
 private:
-vector<stat> tableBinaire;//score des fichiers
-};
+map<string,stat> tableBinaire;
+map<string,stat> tableScore;
+};*/
 class MoteurRechercheVOne:public MoteurRecherche
 {
 public:

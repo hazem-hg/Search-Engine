@@ -48,6 +48,24 @@ indexe::indexe()
 indexe::~indexe()
 {}
 
+    //class ordonnanceur
+ordonnanceur::ordonnanceur()
+{
+}
+vector<string> ordonnanceur::getKeywords()const
+{
+return keywords->getWords();
+}
+vector<string> ordonnanceur::getResult()const
+{
+return result;
+}
+void ordonnanceur::lireRequete(istream& flux)
+{
+keywords->lire(flux);
+}
+ordonnanceur::~ordonnanceur()
+{}
 
 
 
