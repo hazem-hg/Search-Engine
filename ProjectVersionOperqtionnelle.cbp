@@ -32,18 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Analyseur.cpp" />
-		<Unit filename="AnalyseurMMap.cpp" />
-		<Unit filename="MoteurRecherche.cpp" />
 		<Unit filename="abstractClass.cpp" />
 		<Unit filename="abstractClass.h" />
 		<Unit filename="derivedClass.cpp" />
 		<Unit filename="derivedClass.h" />
-		<Unit filename="derivedClassNVersion.h" />
-		<Unit filename="index.cpp" />
 		<Unit filename="main.cpp" />
-		<Unit filename="ordonnaceur.cpp" />
-		<Unit filename="ordonnanceurBinaire.cpp" />
 		<Unit filename="utils.h" />
 		<Extensions>
 			<code_completion />
