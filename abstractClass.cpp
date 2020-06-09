@@ -1,15 +1,26 @@
 #include"abstractClass.h"
-//les méthode et les fonctions amies lièes à la
+//ce header contient les méthodes et les fonctions amies des classes abstraites
+//classe lecture
+ lecture::lecture()
+{
+
+};
 
 
-
-
-
-
-
-
-
-
+vector<string> lecture::getWords()const
+{
+return mots;
+}
+ostream& operator<<(ostream& flux,lecture* l)
+{
+for(unsigned int i=0;i<l->mots.size();i++)
+{
+flux<<l->mots.at(i)<<" ";
+}
+return flux;
+}
+lecture::~lecture()
+{}
 
 
 

@@ -9,9 +9,11 @@ class lecture
 public:
 lecture();//constructeur permettant d'initialiser le nom du fichier
  virtual bool useData(string)=0;//fonction amie se trouve dans utils.h qui permet d'éliminer la ponctuation et les symboles
- virtual vector<string> lire(istream&)=0;//retourner les mots non traités contenues dans le fichier p
-vector<string>getWords();
+ virtual void lire(istream&)=0;//retourner les mots non traités contenues dans le fichier p
+virtual istream& operator>>(istream&)=0;
+vector<string>getWords()const;
 friend ostream& operator<<(ostream&,lecture*);
+
 virtual ~lecture();
 protected:
 vector<string> mots;//les mots extraites du fichier

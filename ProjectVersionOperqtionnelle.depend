@@ -104,10 +104,10 @@
 1591533658 source:/home/toto/Documents/GitHub/Search-Engine/abstractClass.cpp
 	"abstractClass.h"
 
-1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/abstractClass.cpp
+1591668101 source:/home/hazem/Documents/GitHub/Search-Engine/abstractClass.cpp
 	"abstractClass.h"
 
-1591659481 /home/hazem/Documents/GitHub/Search-Engine/abstractClass.h
+1591668932 /home/hazem/Documents/GitHub/Search-Engine/abstractClass.h
 	"utils.h"
 
 1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/AnalyseurMMap.cpp
@@ -115,4 +115,10 @@
 	<map>
 
 1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/ordonnanceurBinaire.cpp
+
+1591663038 source:/home/hazem/Documents/GitHub/Search-Engine/derivedClass.cpp
+	"derivedClass.h"
+
+1591667749 /home/hazem/Documents/GitHub/Search-Engine/derivedClass.h
+	"abstractClass.h"
 
