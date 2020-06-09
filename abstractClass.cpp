@@ -42,6 +42,11 @@ words=v;
 }
 Analyseur::~Analyseur()
 {}
+    //class indexe
+indexe::indexe()
+{}
+indexe::~indexe()
+{}
 
 
 
@@ -53,20 +58,7 @@ Analyseur::~Analyseur()
 
 
 
-/*ostream& operator <<(ostream& flux,indexeVcet* ind)//surcharge de l'operateur <<
-{
-flux<<"fichier"<<","<<"mot"<<","<<"occurence"<<endl;
-    for(vector<triplet>::iterator i=ind.v.begin();i!=ind.v.end();i++)
-    {
-        flux<<i->fichier<<"," <<i->mot<<","<<i->occ<<endl;
-
-    }
-
-
-return flux ;
-
-};
-
+/*
 
 ostream& operator<<(ostream& flux,ordonnanceur* ord)
 {

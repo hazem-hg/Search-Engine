@@ -39,7 +39,7 @@ public :
 indexeVect();
 void indexer(AnalyseurVect*) ;
 void reindexer(AnalyseurVect*);
-vector<triplet> getIndex();
+vector<triplet> getIndex()const;
 friend ostream& operator <<(ostream&,indexeVect*);
 friend ostream& operator>>(ostream&,indexeVect*);
 ~indexeVect();
@@ -52,11 +52,12 @@ class indexeMMap
 {
 public :
 indexeMMap();
-multimap<string,stat> indexer(AnalyseurMap*) ;
-multimap<string,stat> reindexer(AnalyseurMap*);
+void indexer(AnalyseurMap*) ;
+void reindexer(AnalyseurMap*);
 multimap<string,stat>getIndexe();
 friend ostream& operator <<(ostream&,indexeMMap*);
 friend istream& operator>>(istream&,indexeMMap*);
+~indexeMMap();
 private:
 multimap<string,stat> v;
 

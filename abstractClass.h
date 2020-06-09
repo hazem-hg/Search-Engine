@@ -38,7 +38,7 @@ indexe();
 
 virtual void indexer(Analyseur*)=0 ;
 virtual void reindexer(Analyseur*)=0;
-
+virtual ~indexe();
 
 };
 class ordonnanceur

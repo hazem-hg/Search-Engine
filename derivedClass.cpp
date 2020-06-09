@@ -133,4 +133,103 @@ flux<<"mot"<<","<<"occurence"<<endl;
     }
     return flux ;
     }
-     //class
+     //class indexeVect
+indexeVect::indexeVect()
+{}
+void indexeVect::indexer(AnalyseurVect* A)
+{
+
+triplet t ;
+
+for(vector<stat>::iterator i=A->getAnalyse().begin();i!=A->getAnalyse().end();i++){
+{
+   t.fichier=A->getFileName();
+   t.mot=i->mot;
+   t.occ=i->occ;
+   v.push_back(t);
+
+}
+
+
+}}
+void indexeVect::reindexer(AnalyseurVect* A)//reindexer un fichier qui existe deja
+{
+for(vector<stat>::iterator i=A->getAnalyse().begin();i!=A->getAnalyse().end();i++)
+{
+for(vector<triplet>::iterator j=v.begin();j!=v.end();j++)
+{if ((A->getFileName()==j->fichier)&&(i->mot==j->mot))
+{
+j->occ=i->occ ;
+break;
+}
+}
+}
+
+}
+vector<triplet>indexeVect::getIndex()const
+{
+return v ;
+}
+indexeVect::~indexeVect()
+{}
+ostream& operator <<(ostream& flux,indexeVect* ind)//surcharge de l'operateur <<
+{
+flux<<"fichier"<<","<<"mot"<<","<<"occurence"<<endl;
+    for(vector<triplet>::iterator i=ind->v.begin();i!=ind->v.end();i++)
+    {
+        flux<<i->fichier<<"," <<i->mot<<","<<i->occ<<endl;
+
+    }
+
+
+return flux ;
+
+};
+        //class indexeMMap
+indexeMMap::indexeMMap()
+{}
+void indexeMMap::indexer(AnalyseurMap* A)
+{
+
+
+
+for(map<string,int>::iterator i=A->getAnalyse().begin();i!=A->getAnalyse().end();i++)
+{stat s ;
+
+   s.mot=i->first;
+   s.occ=i->second;
+   v.insert(map<string,stat>::value_type(A->getFileName(),s));
+
+}
+
+
+}
+void indexeMMap::reindexer(AnalyseurMap* A)//reindexer un fichier qui existe deja
+{
+for(map<string,int>::iterator i=A->getAnalyse().begin();i!=A->getAnalyse().end();i++)
+{
+for(multimap<string,stat>::iterator j=v.begin();j!=v.end();j++)
+{if ((A->getFileName()==j->first)&&(i->first==j->second.mot))
+{
+j->second.occ=i->second ;
+break;
+}
+}
+}
+
+}
+indexeMMap::~indexeMMap()
+{}
+ostream& operator <<(ostream& flux,indexeMMap* ind)//surcharge de l'operateur <<
+{
+flux<<"fichier"<<","<<"mot"<<","<<"occurence"<<endl;
+    for(multimap<string,stat>::iterator i=ind->v.begin();i!=ind->v.end();i++)
+    {
+        flux<<i->first<<"," <<i->second.mot<<","<<i->second.occ<<endl;
+
+    }
+
+
+return flux ;
+
+};
