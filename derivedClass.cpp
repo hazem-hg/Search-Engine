@@ -91,12 +91,11 @@ AnalyseurVect::~AnalyseurVect()
 {}
             //class AnalyseurMap
 AnalyseurMap::AnalyseurMap(string name,vector<string> v):Analyseur(name,v)
-{
-}
+{}
 void AnalyseurMap::analyser()
 {
 st.clear();
-stat s;
+
 for(vector<string>::iterator i=getWords().begin();i!=getWords().end();i++)
 {
 bool exist=false;
@@ -118,4 +117,20 @@ st.insert(map<string,int>::value_type(*i,1));
 }
 
 }
+map<string,int>AnalyseurMap::getAnalyse()const
+{
+return st  ;
+}
+AnalyseurMap::~AnalyseurMap()
+{}
+ostream& operator <<(ostream& flux,AnalyseurMap* A)//surcharge de l'operateur <<
+{
+flux<<"mot"<<","<<"occurence"<<endl;
+    for(map<string,int>::iterator i=A->getAnalyse().begin();i!=A->getAnalyse().end();i++)
+    {
+        flux<<i->first<<","<<i->second<<endl;
 
+    }
+    return flux ;
+    }
+     //class
