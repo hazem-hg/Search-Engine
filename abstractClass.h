@@ -21,11 +21,12 @@ vector<string> mots;//les mots extraites du fichier
 class Analyseur
 {
 public:
- Analyseur(string);
+ Analyseur(string,vector<string>);
  virtual void analyser()=0;
- string getFileName();
- vector<string> getWords();
+ string getFileName()const;
+ vector<string> getWords()const;
  void  setFile(string,vector<string>);
+ virtual ~Analyseur();
 private:
     string fichierCourant ;
     vector<string> words;

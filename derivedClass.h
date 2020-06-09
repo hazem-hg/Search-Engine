@@ -11,23 +11,25 @@ lectureStandard();//constructeur permettant d'initialiser le nom du fichier
 istream& operator>>(istream&);
 ~lectureStandard();
 };
-class AnalyseurVect
+class AnalyseurVect:public Analyseur
 {
 public:
  AnalyseurVect(string,vector<string>);
-void analyser(vector<string>);
-vector<stat> getAnalyse();
+void analyser();
+vector<stat> getAnalyse()const;
 friend ostream& operator <<(ostream&,AnalyseurVect);
+~AnalyseurVect();
 private:
  vector<stat> st;
 };
-class AnalyseurMap
+class AnalyseurMap:public Analyseur
 {
 public:
- AnalyseurMap(string);
- void analyser(vector<string>);
- map<string,int> getAnalyse();
-friend ostream& operator <<(ostream&,AnalyseurMap);
+ AnalyseurMap(string,vector<string>);
+ void analyser();
+ map<string,int> getAnalyse()const;
+friend ostream& operator <<(ostream&,AnalyseurMap*);
+~AnalyseurMap();
 private:
  map<string,int> st;
 };

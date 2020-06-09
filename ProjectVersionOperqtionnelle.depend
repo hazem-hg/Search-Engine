@@ -63,7 +63,7 @@
 1591645920 source:/home/hazem/Documents/GitHub/Search-Engine/main.cpp
 	"utils.h"
 
-1591540213 source:/home/toto/Documents/GitHub/Search-Engine/Analyseur.cpp
+1591670080 source:/home/toto/Documents/GitHub/Search-Engine/Analyseur.cpp
 
 1591539643 /home/toto/Documents/GitHub/Search-Engine/utils.h
 	<iostream>
@@ -89,19 +89,19 @@
 1591540960 source:/home/toto/Documents/GitHub/Search-Engine/utils.cpp
 	"utils.h"
 
-1591540320 source:/home/toto/Documents/GitHub/Search-Engine/AnalyseurMMap.cpp
+1591671902 source:/home/toto/Documents/GitHub/Search-Engine/AnalyseurMMap.cpp
 	"utils.h"
 	<map>
 
 1591500727 source:/home/toto/Documents/GitHub/Search-Engine/indexeMap.cpp
 	"utils.h"
 
-1591539816 /home/toto/Documents/GitHub/Search-Engine/abstractClass.h
+1591671226 /home/toto/Documents/GitHub/Search-Engine/abstractClass.h
 	"utils.h"
 
 1591530220 source:/home/toto/Documents/GitHub/Search-Engine/ordonnanceurBinaire.cpp
 
-1591533658 source:/home/toto/Documents/GitHub/Search-Engine/abstractClass.cpp
+1591671051 source:/home/toto/Documents/GitHub/Search-Engine/abstractClass.cpp
 	"abstractClass.h"
 
 1591668101 source:/home/hazem/Documents/GitHub/Search-Engine/abstractClass.cpp
@@ -120,5 +120,11 @@
 	"derivedClass.h"
 
 1591667749 /home/hazem/Documents/GitHub/Search-Engine/derivedClass.h
+	"abstractClass.h"
+
+1591672071 source:/home/toto/Documents/GitHub/Search-Engine/derivedClass.cpp
+	"derivedClass.h"
+
+1591672032 /home/toto/Documents/GitHub/Search-Engine/derivedClass.h
 	"abstractClass.h"
 

@@ -21,11 +21,27 @@ return flux;
 }
 lecture::~lecture()
 {}
-
-
-
-
-
+//class Analyseur
+Analyseur::Analyseur(string name,vector<string> v)
+{
+fichierCourant=name;
+words=v;
+}
+string Analyseur::getFileName()const
+{
+return fichierCourant;
+}
+vector<string> Analyseur::getWords()const
+{
+return words;
+}
+void Analyseur::setFile(string name,vector<string> v)
+{
+fichierCourant=name;
+words=v;
+}
+Analyseur::~Analyseur()
+{}
 
 
 
@@ -50,17 +66,6 @@ flux<<"fichier"<<","<<"mot"<<","<<"occurence"<<endl;
 return flux ;
 
 };
-
-ostream& operator <<(ostream& flux,Analyseur* A)//surcharge de l'operateur <<
-{
-flux<<"mot"<<","<<"occurence"<<endl;
-    for(vector<stat>::iterator i=A.st.begin();i!=A.st.end();i++)
-    {
-        flux<<i->mot<<","<<i->occ<<endl;
-
-    }
-    return flux ;
-    }
 
 
 ostream& operator<<(ostream& flux,ordonnanceur* ord)
